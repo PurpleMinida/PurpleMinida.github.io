@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body, html{
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.box{
+			width: 100%;
+			height: 100%;
+			background: black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.theVideo{
+			width: 700px;
+
+		}
+		.toGithub{
+			width: 30px;
+			height: 30px;
+			position: fixed;
+			top: 0;
+			right: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<video class="theVideo" src="./show.mp4" controls></video>
+	</div>
+	<img id="toGithub" class="toGithub" src="./toGithub.png">
+	<script type="text/javascript">
+		var toGithub = document.getElementById('toGithub')
+		//点击跳转
+		toGithub.onclick = function(){
+			window.open('https://github.com/PurpleMinida/electronApp.git')
+		}
+		//悬浮变背景
+		toGithub.onmouseover = function(){
+			this.src = './toGithubActive.png'
+		}
+		//离开返回原来背景
+		toGithub.onmouseout = function(){
+			this.src = './toGithub.png'
+		}
+	</script>
+</body>
+</html>
